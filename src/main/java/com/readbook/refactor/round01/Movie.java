@@ -1,29 +1,25 @@
 package com.readbook.refactor.round01;
 
+import lombok.Data;
+
 /**
- * Created by yupeng on 30/10/2016.
+ * Movie 只是一个简单的纯数据类
  */
+@Data
 public class Movie {
-    static final int CHILDRENS = 2;
-    static final int REGULAR = 0;
-    static final int NEW_RELEASE = 1;
-    String _title;
-    int _priceCode;
+
+    public static final int CHILDRENS = 2;
+    public static final int REGULAR = 0;
+    public static final int NEW_RELEASE = 1;
+
+
+    private String _title;
+    private int _priceCode;
 
     public Movie(String title, int priceCode) {
         _title = title;
         _priceCode = priceCode;
     }
 
-    public int getPriceCode() {
-        return _priceCode;
-    }
 
-    public void setPriceCode(int _priceCode) {
-        this._priceCode = _priceCode;
-    }
-
-    public String getTitle() {
-        return _title;
-    }
 }
