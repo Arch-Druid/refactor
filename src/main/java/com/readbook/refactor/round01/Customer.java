@@ -44,14 +44,12 @@ public class Customer {
 
     public static void main(String[] args) {
         Customer customer = new Customer("yupeng");
-        Vector rentals = new Vector();
         Movie movie = new Movie("新的影片", 2);
         Movie movie2 = new Movie("REGULAR", 2);
         Rental rental = new Rental(movie, 100);
         Rental rental2 = new Rental(movie2, 3333);
-        rentals.add(rental);
-        rentals.add(rental2);
-        customer.set_rentals(rentals);
+        customer.addRental(rental);
+        customer.addRental(rental2);
         System.out.println(customer.statement());
 
 
